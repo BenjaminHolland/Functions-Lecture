@@ -3,8 +3,6 @@
 //Either Lambda or Non-Lambda (If we've been over that)
 //Either First-Order or Higher-Order
 
-//NOTE: Some answers depend on how they're used. You will need to
-//read all the questions before answering.
 
 //Example
 //Named, First-Order, Non-Lambda
@@ -34,11 +32,9 @@ let D=()=>{
     }
 }
 
-//E
-let E=B;
 
-//F
-let F=((g:()=>number):(number)=>number=>{
+//E
+let E=((g:()=>number):(number)=>number=>{
     return x=>{
         return g()*x;
     };
