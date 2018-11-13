@@ -1,7 +1,7 @@
 //Classify the following by describing each item, using
 //Either Named or Anonymous
 //Either Lambda or Non-Lambda (If we've been over that)
-//Either First-Order or Anonymous
+//Either First-Order or Higher-Order
 
 //NOTE: Some answers depend on how they're used. You will need to
 //read all the questions before answering.
@@ -36,3 +36,10 @@ let D=()=>{
 
 //E
 let E=B;
+
+//F
+let F=((g:()=>number):(number)=>number=>{
+    return x=>{
+        return g()*x;
+    };
+})(()=>3);
