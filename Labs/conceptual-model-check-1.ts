@@ -18,5 +18,15 @@ function d(l:()=>void,m:number):()=>number{
         return m;
     }
 }
-function e():void{}
+function e():void{
+    console.log("Hello");
+}
+function f(l:number):number{
+    return d(e,5)();
+}
+function g(r:(number)=>boolean,n:number):void{
+    if(r(n)) return;
+    console.log("Got ",n);
+    g(r,n-1);
+}
 
