@@ -40,3 +40,4 @@ class GeneralFunctionDescriptions {
         })();
     }
 }
+export {GeneralFunctionDescriptions as Program}

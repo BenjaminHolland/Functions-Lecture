@@ -43,3 +43,4 @@ class ObservableFizzBuzzExample {
 
     }
 }
+export {ObservableFizzBuzzExample as Program}

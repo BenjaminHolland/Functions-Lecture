@@ -5,6 +5,7 @@ class TriviallySimpleAsyncExample {
     }
     static async run() {
         const iPromiseYouAThreeInASecond: () => Promise<number> = async () => {
+            console.log("Hold on, getting you that three...");
             await this.sleepAsync(1000);
             return 3;
         }
@@ -13,3 +14,4 @@ class TriviallySimpleAsyncExample {
         console.log(`Here's that three you wanted a second ago. ${theThreeIPromisedYou}`);
     }
 }
+export {TriviallySimpleAsyncExample as Program}

@@ -3,7 +3,7 @@ import * as rxop from "rxjs/operators";
 class FizzBuzzEvent {
     constructor(public n: number, public handled: boolean) { }
 }
-class SlightlyBetterObservableFizzBuzz {
+class SlightlyBetterObservableFizzBuzzExample {
     static async run() {
         const numbers: rx.ConnectableObservable<FizzBuzzEvent> = <rx.ConnectableObservable<FizzBuzzEvent>>
             rx.interval(1000).pipe(
@@ -30,3 +30,4 @@ class SlightlyBetterObservableFizzBuzz {
         numbers.connect();
     }
 }
+export {SlightlyBetterObservableFizzBuzzExample as Program};

@@ -9,3 +9,4 @@ class TriviallySimplePromiseExample {
         await iPromiseYouAThreeInASecond.then(n => console.log(`See, I told you I'd give you a ${n}.`));
     }
 }
+export {TriviallySimplePromiseExample as Program }

@@ -5,7 +5,7 @@ class RawEventLoopExample {
         const signal: EventEmitter = new EventEmitter();
 
         signal.once("signaled", () => {
-            console.log("Signed detected...");
+            console.log("Hey! Was that a squirrel?");
         });
 
         signal.on("signaled", () => {
@@ -17,15 +17,18 @@ class RawEventLoopExample {
         });
 
         const handle: NodeJS.Timeout = setInterval(() => {
+            console.log("Sending out a signal...");
             signal.emit("signaled");
         }, 1000);
 
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 console.log("Stopping");
+                
                 clearInterval(handle);
                 resolve();
             }, 3000);
         });
     }
 }
+export {RawEventLoopExample as Program}

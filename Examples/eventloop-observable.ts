@@ -1,6 +1,6 @@
 import * as rx from "rxjs";
 import * as rxop from "rxjs/operators";
-class ObservableExample {
+class ObservableEventLoopExample {
     static async run() {
 
 
@@ -25,12 +25,17 @@ class ObservableExample {
         const connection = signalObservable.connect();
 
         timeoutObservable.subscribe(() => { }, ex => { }, () => {
+            console.log("Stopping production of events...");
             connection.unsubscribe();
+            console.log("Signalling waiting promise...");
             stop.complete();
         });
 
+        console.log("Waiting for the timeout to trigger...");
         await stop.toPromise();
+        console.log("Timeout triggered.");
 
 
     }
 }
+export {ObservableEventLoopExample as Program}
